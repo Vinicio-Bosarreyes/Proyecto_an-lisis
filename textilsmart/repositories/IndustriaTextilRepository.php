@@ -10,13 +10,13 @@ class IndustriaTextilRepository {
     }
 
     public function findAll() {
-        $stmt = $this->conn->prepare("SELECT * FROM industria_textil");
+        $stmt = $this->conn->prepare("SELECT * FROM Productos");
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $industriaTextiles = [];
         foreach ($result as $row) {
-            $industriaTextiles[] = new IndustriaTextil($row['id'], $row['nombre'], $row['descripcion']);
+            $industriaTextiles[] = new IndustriaTextil($row['id'], $row['nombre'], $row['precio']);
         }
 
         return $industriaTextiles;

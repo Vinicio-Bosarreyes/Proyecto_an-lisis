@@ -2,12 +2,12 @@
 class IndustriaTextil {
     private $id;
     private $nombre;
-    private $descripcion;
+    private $precio;
     
-    public function __construct($id, $nombre, $descripcion) {
+    public function __construct($id, $nombre, $precio) {
         $this->id = $id;
         $this->nombre = $nombre;
-        $this->descripcion = $descripcion;
+        $this->precio = $precio;
     }
 
     public function getId() {
@@ -18,8 +18,8 @@ class IndustriaTextil {
         return $this->nombre;
     }
 
-    public function getDescripcion() {
-        return $this->descripcion;
+    public function getPrecio() {
+        return $this->precio;
     }
 }
 ?>

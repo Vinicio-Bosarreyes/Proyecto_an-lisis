@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <h1>Industria Textil</h1>
+    <h1>Productos</h1>
     <ul>
         <?php foreach ($industriaTextiles as $textil): ?>
             <li>
-                <?php echo $textil->getNombre() . " - " . $textil->getDescripcion(); ?>
+                <?php echo " " . $textil->getId() . " - " . $textil->getNombre() . " - " . $textil->getPrecio(); ?>
             </li>
         <?php endforeach; ?>
     </ul>
